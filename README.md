@@ -1,5 +1,28 @@
-# UNDER CONSTRUCTION!! - OpenAI Assistants API with File Search capabilities
+#  OpenAI Assistants API with File Search capabilities (UNDER CONSTRUCTION!!)
 
+## Policy Explainer
+
+I uploaded 2 files programmatically to OpenAI's Vector Store, one in `.pdf` and one in `.md` format, both covering policy documents for a ficticious company. OpenAI takes care of creating chunks and embeddings in an optimised way, no need to address these ourselves.
+I'm using the Assistants API to search these files to answer user questions, using the uploaded files as embedded documents. The Assistant automatically decides which document to use and answers the related questions correctly:
+
+
+`Question: Can I bring my pet cat into the office?`
+
+
+![policy-answer](policy-answer.png)
+
+
+
+## Data Visualizer
+
+I uploaded the Microsoft Corporation's latest weekly stock price data for the last 2 years in `pdf` file format into OpenAI's Vector Store.
+I enabled both the 'file_search' and the 'code_interpreter' tools for the Assistant and asked it to visualise the data:
+
+`Prompt: Visualize the Microsoft Corporations stock prices in the last 2 years`
+
+![visual_from_pdf](visual_from_pdf.png)
+
+I repeated this exercise with providing a `.json` file instead of the `pdf` and OpenAI was able to create the same [result](visual_from_json.png). At the time of writing, other file formats, such as `.csv` or `.xlsx` were not supported for embeddings.
 
 ---
 
@@ -42,6 +65,8 @@
 7. Run Jupyter Notebook:
 
    `jupyter notebook`
+
+8. Run the code snippets in the given/desired order.
 
 
 ## Credits
