@@ -6,9 +6,6 @@ I uploaded 2 files programmatically to OpenAI's Vector Store, one in `.pdf` and 
 I'm using the Assistants API to search these files to answer user questions, using the uploaded files as embedded documents. The Assistant automatically decides which document to use and answers the related questions correctly:
 
 
-`Question: Can I bring my pet cat into the office?`
-
-
 ![policy-answer](policy-answer.png)
 
 
@@ -18,9 +15,10 @@ I'm using the Assistants API to search these files to answer user questions, usi
 I uploaded the Microsoft Corporation's latest weekly stock price data for the last 2 years in `pdf` file format into OpenAI's Vector Store.
 I enabled both the 'file_search' and the 'code_interpreter' tools for the Assistant and asked it to visualise the data:
 
-`Prompt: Visualize the Microsoft Corporations stock prices in the last 2 years`
+`Prompt: Visualize the Microsoft Corporations stock prices for the last 2 years`
 
 ![visual_from_pdf](visual_from_pdf.png)
+![visual_description](visual-description.png)
 
 I repeated this exercise with providing a `.json` file instead of the `pdf` and OpenAI was able to create the same [result](visual_from_json.png). At the time of writing, other file formats, such as `.csv` or `.xlsx` were not supported for embeddings.
 
