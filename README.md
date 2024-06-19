@@ -1,4 +1,4 @@
-#  OpenAI Assistants API with File Search capabilities (UNDER CONSTRUCTION!!)
+#  OpenAI Assistants API with File Search capabilities
 
 ## Policy Explainer
 
